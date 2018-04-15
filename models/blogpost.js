@@ -27,7 +27,7 @@ const update = (id, updates) => {
   let result;
   const updatedBlogposts = blogposts.map( blogpost => {
     if (blogpost.id === id) {
-      result = { ...blogpost, ...updates }; // we have a match and we transform blogpost
+      result = { ...blogpost, ...updates };
       return result;
     } else {
       return blogpost;
