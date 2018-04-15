@@ -1,5 +1,4 @@
 // models/blogpost.js
-
 const uuid = require('uuid/v1');
 const fs = require('fs');
 const path = require('path');
@@ -17,7 +16,7 @@ const readIndividual = (id) => {
   return blogpost;
 }
 
-const create = (request, blogpost) => {
+const create = (blogpost) => {
   blogpost.id = uuid();
   blogposts.push(blogpost);
   fs.writeFileSync(blogpostsPath, JSON.stringify(blogposts));
